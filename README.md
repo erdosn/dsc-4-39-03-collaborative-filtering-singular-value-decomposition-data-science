@@ -175,7 +175,7 @@ from scipy.sparse import csc_matrix
 from scipy.sparse.linalg import svds
 
 # Create a sparse matrix 
-A = csc_matrix([[1, 0, 0], [5, 0, 2], [0, -1, 0], [0, 0, 3]], dtype=float)
+A = csc_matrix([[1, 0, 0], [5, 0, 1], [0, -1, 0], [0, 0, 3]], dtype=float)
 
 # Apply SVD
 u, s, vt = svds(A, k=2) # k is the number of stretching factors
@@ -189,23 +189,23 @@ print ('\nV.T:\n', vt)
 
     A:
      [[ 1.  0.  0.]
-     [ 5.  0.  2.]
+     [ 5.  0.  1.]
      [ 0. -1.  0.]
      [ 0.  0.  3.]]
     =
     
     U:
-     [[ 1.73323831e-01  1.56782328e-01]
-     [ 2.27856346e-01  9.54078802e-01]
-     [ 8.33818732e-17  1.75584189e-17]
-     [-9.58144214e-01  2.55250744e-01]]
+     [[-9.41932335e-02  1.83523367e-01]
+     [-1.42533556e-01  9.70250644e-01]
+     [ 6.96626528e-19  9.94184068e-18]
+     [ 9.85297833e-01  1.57901427e-01]]
     
     Σ:
-     [2.75193379 5.6059665 ]
+     [2.92677619 5.23774581]
     
     V.T:
-     [[ 4.76975707e-01 -2.29461394e-16 -8.78916478e-01]
-     [ 8.78916478e-01 -9.84319084e-17  4.76975707e-01]]
+     [[-2.75682513e-01 -2.03886994e-18  9.61248746e-01]
+     [ 9.61248746e-01 -5.20728343e-17  2.75682513e-01]]
 
 
 With this simple example, consider A as the __utility matrix__ with users and products links. 
